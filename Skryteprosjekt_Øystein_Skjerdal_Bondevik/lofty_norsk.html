@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+	<meta charset="utf-8">
+	<title>Byggmeistar Bob</title>
+	<link rel="stylesheet" type="text/css" href="team.css">
+	<link href='https://fonts.googleapis.com/css?family=Assistant' rel='stylesheet'>	
+</head>
+<body>
+	<header>
+			<nav>
+				<a href="english.html"><img id="logo" src="Media/logo.png"></a>
+				<a href="english.html">HEIM</a>
+				<a href="about_norsk.html">Om</a>
+				<a href="new_norsk.html">Nye Bob</a>
+				<div class="dropdown">
+			    	<button class="dropbtn"><a href="pictures_norsk.html">Laget &#9662;</a></button>
+				    <div class="dropdown-content">
+					<a href="bob_norsk.html">Bob</a>
+					<a href="scoop_norsk.html">Scoop</a>
+					<a id="new" href="#">Lofty</a>
+					<a href="muck_norsk.html">Muck</a>
+					</div>
+				</div>
+				<a href="chat.html">Chat</a>
+				<a href="nettbutikk.html">Nettbutikk</a>
+			</nav>
+			<div>
+					<label>Språk</label>
+					<select id="foo" class="custom-select" name="velgSpråk">
+						<option value="#">Norsk</option>
+						<option value="lofty.html">English</option>
+					</select>
+			</div>
+		</div>
+	</header>
+	<hr>
+	<main>
+		<div id="bilde" class="kol-6">
+			<img src="Media/lofty.png" class="tractor">
+		</div>
+		<div class="kol-6">
+			<h1>Lofty</h1>
+			<p class="tekst">
+				Lofty er ein blå mobil-krane basert på maskina Liebherr LTM 1200-5.1. I serien er han ein lettskremt karakter som manglar mykje sjølvtillit, noko som gjer at han ikkje trur han kan gjera ting han kan. Lofty er den sterkaste av Bob sine maskiner, men dette gløymer han ofte. Han er sjenert og nervøs, men til slutt kjem han sterkare tilbake og gjer det arbeidet som han skal gjera. 				
+			</p>
+		</div>
+	</main>
+	<footer>
+		<div id="footer">
+			<div id="copyright">
+				<ul>
+					<li><i>Copyright:</i> Øystein Skjerdal Bondevik 2018</li>
+					<li><i>Last updated</i> 13.12.2018</li>
+				</ul>
+			</div>	
+			<div>
+				<ul>
+					<li>About the <a target="_blank" href="https://no.wikipedia.org/wiki/Kjell_Magne_Bondevik">Bondevik-corporation</a></li>
+				</ul>
+			</div>
+		</div>	
+	</footer>
+</body>
+<script>
+    document.getElementById("foo").onchange = function() {
+        if (this.selectedIndex!==0) {
+            window.location.href = this.value;
+        }        
+    };
+</script>
+</html>

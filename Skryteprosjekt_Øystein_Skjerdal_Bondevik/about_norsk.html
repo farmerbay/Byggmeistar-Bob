@@ -1,0 +1,100 @@
+         <!DOCTYPE html>
+<html lang="no">
+<head>
+	<meta charset="utf-8">
+	<title>Byggmeistar Bob</title>
+	<link rel="stylesheet" type="text/css" href="about.css">
+	<link href='https://fonts.googleapis.com/css?family=Assistant' rel='stylesheet'>	
+</head>
+<body>
+	<header>
+			<nav>
+				<a href="english.html"><img id="logo" src="Media/logo.png"></a>
+				<a href="english.html">HEIM</a>
+				<a id="new" href="#">Om</a>
+				<a href="new_norsk.html">Nye Bob</a>
+				<div class="dropdown">
+			    	<button class="dropbtn"><a href="pictures_norsk.html">Laget &#9662;</a></button>
+				    <div class="dropdown-content">
+					<a href="bob_norsk.html">Bob</a>
+					<a href="scoop_norsk.html">Scoop</a>
+					<a href="lofty.html">Lofty</a>
+					<a href="muck_norsk.html">Muck</a>
+					</div>
+				</div>
+				<a href="chat.html">Chat</a>
+				<a href="nettbutikk.html">Nettbutikk</a>
+			</nav>			<div>
+					<label>Språk</label>
+					<select id="foo" class="custom-select" name="velgSpråk">
+						<option value="#">Norsk</option>
+						<option value="about.html">English</option>
+					</select>
+			</div>
+		</div>
+	</header>
+	<hr>
+	<main>
+		<div class="kol-6">
+			<h1 id="hovudoverskrift">Byggmeistar Bob</h1>
+			<p class="tekst">Byggmeister Bob er ein animert fjernsynsserie laga av Keith Chapman. Serien blei produsert av «Hot-animation» heilt fram til 2012, men i dag er det «Mattel» som har ansvar for produksjonen. Byggmeister Bob er ein velkjent serie i mange land, sjølv om serien eigentleg berre var produsert for sjåarane på dei britiske øyene. Meininga med serien er å læra ungar om viktigheita ved det å hjelpa andre med problema deira, uansett kor stort eller lite det er, og kvar episode omhandlar eitt av Bob sine prosjekt. Fleire gonger i løpet av dei siste åra har serien skifta namn. Fyrst heitte den «Byggmeister Bob», men det gjorde produsentane noko med. «Prosjekt: Bygg det» var namnet frå 2005 til 2009, og «Klar, ferdig, Bygg!» var namnet heilt fram til 2012. Byggmeister Bob har også blitt veldig kjent for den berømte intro-songen; «Kan det fiksast?», ein song skriven av Paul K. Joyce. Denne songen kom på første plass på topplistene i Storbritannia  og blei seld millionvis av gonger. I alt har serien 355 episodar delt på 20 sesongar.</p>
+		</div>
+		<div class="kol-6">
+			<img id="aksjon" src="Media/bob_action.jpg">
+		</div>
+		<div class="kol-12">
+			<h1 id="sitat"><i>Lorem ipsum dolor sit amet</i></h1>
+		</div>
+		<div id="bygging" class="kol-12">
+			<h1>Bygging av sida</h1>
+			<p id="byggtekst" class="tekst">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<div class="kol-4 lite">
+			<img src="Media/bob.jpg">
+		</div>
+		<div class="kol-4 lite">
+			<img src="Media/bob.jpg">
+		</div>
+		<div id="ide" class="kol-4">
+			<h1>Ideen bak</h1>
+			<p class="tekst">Ideen bak det å byggja denne sida, var å laga ei side som både tilfredsgjorde dei gamle tilhengjarane til serien, men på same tid gjera rom til nye tilhengjarar, og til og med personar som endå ikkje er tilhengjarar. Eg søkte på internettet for å finna informasjon om Bob, men dette viste seg å vera vanskeleg, og spesielt på norsk. Dette kunne eg ikkje seia meg nøgd med, og bestemte meg for å byggja sida. Den er også eit skulearbeid, som kan vera den eigentlege grunnen.</p>
+		</div>
+		<div class="kol-12">
+			<form action="#">
+				<input type="text" name="namn" placeholder="Namn" required>
+				<input type="number" name="alder" placeholder="Alder">
+				<span>Glad</span><input type="radio" value="happy" name="rbFeeling">
+				<span>Sur</span><input type="radio" value="sad" name="rbFeeling">
+				<span>OK</span><input type="radio" value="ok" name="rbFeeling">
+				<button type="submit">Send inn</button>
+			</form>			
+		</div>
+	</main>
+	<footer>
+		<div id="footer">
+			<div id="copyright">
+				<ul>
+					<li><i>Copyright:</i> Øystein Skjerdal Bondevik 2018</li>
+					<li><i>Førre oppdatering</i> 15.12.2018</li>
+				</ul>
+			</div>	
+			<div>
+				<ul>
+					<li>Om<a target="_blank" href="https://no.wikipedia.org/wiki/Kjell_Magne_Bondevik">Bondevik-sleskapet</a></li>
+				</ul>
+			</div>
+		</div>	
+	</footer>
+<script>
+    document.getElementById("foo").onchange = function() {
+        if (this.selectedIndex!==0) {
+            window.location.href = this.value;
+        }        
+    };
+</script>
+</html>

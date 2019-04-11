@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+	<meta charset="utf-8">
+	<title>Byggmeistar Bob</title>
+	<link rel="stylesheet" type="text/css" href="team.css">
+	<link href='https://fonts.googleapis.com/css?family=Assistant' rel='stylesheet'>	
+</head>
+<body>
+	<header>
+			<nav>
+				<a href="english.html"><img id="logo" src="Media/logo.png"></a>
+				<a href="english.html">HEIM</a>
+				<a href="about_norsk.html">Om</a>
+				<a href="new_norsk.html">Nye Bob</a>
+				<div class="dropdown">
+			    	<button class="dropbtn"><a href="pictures_norsk.html">Laget &#9662;</a></button>
+				    <div class="dropdown-content">
+					<a href="bob_norsk.html">Bob</a>
+					<a href="scoop_norsk.html">Scoop</a>
+					<a href="lofty.html">Lofty</a>
+					<a id="new" href="#">Muck</a>
+					</div>
+				</div>
+				<a href="chat.html">Chat</a>
+				<a href="nettbutikk.html">Nettbutikk</a>
+			</nav>
+			<div>
+					<label>Språk</label>
+					<select id="foo" class="custom-select" name="velgSpråk">
+						<option value="#">Norsk</option>
+						<option value="muck.html">English</option>
+					</select>
+			</div>
+		</div>
+	</header>
+	<hr>
+	<main>
+		<div id="bilde" class="kol-6">
+			<img src="Media/muck.png" class="tractor">
+		</div>
+		<div class="kol-6">
+			<h1>Muck</h1>
+			<p class="tekst">
+				Muck er ein raud bulldosar med eit lasteplan. Ho er ein av dei minste modne maskinene og elskar å verta skiten. Ho gjer ofte ting utan å tenkja, noko som gjer at ho kjem inn i mykje trøbbel. Muck er redd for mørket, men greier faktisk og vera roleg dei gongene ho kjem opp i det. Ho er ein av dei mest godhjarta maskinene, men har ein tendens for å vera dum i ein del situasjonar. Til slutt lærar ho alltid leksa si. Muck kan minna om ungane som ser på serien, med at ho gjer noko og lærar frå feila hennar. 		
+			</p>
+		</div>
+	</main>
+	<footer>
+		<div id="footer">
+			<div id="copyright">
+				<ul>
+					<li><i>Copyright:</i> Øystein Skjerdal Bondevik 2018</li>
+					<li><i>Last updated</i> 13.12.2018</li>
+				</ul>
+			</div>	
+			<div>
+				<ul>
+					<li>About the <a target="_blank" href="https://no.wikipedia.org/wiki/Kjell_Magne_Bondevik">Bondevik-corporation</a></li>
+				</ul>
+			</div>
+		</div>	
+	</footer>
+</body>
+<script>
+    document.getElementById("foo").onchange = function() {
+        if (this.selectedIndex!==0) {
+            window.location.href = this.value;
+        }        
+    };
+</script>
+</html>

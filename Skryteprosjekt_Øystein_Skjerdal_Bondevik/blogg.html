@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+	<html lang="no">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Byggmeistar Bob</title>
+	<link rel="stylesheet" href="blogg.css">
+	<link href='https://fonts.googleapis.com/css?family=Assistant' rel='stylesheet'>
+	</head>
+	<body>
+	
+	<header>
+			<nav>
+				<a href="home.html"><img id="logo" src="Media/logo.png"></a>
+				<a id="home" href="home.html">HOME</a>
+				<a href="about.html">About</a>
+				<a href="new.html">New Bob</a>
+				<div class="dropdown">
+			    	<button class="dropbtn"><a href="pictures.html">The team &#9662;</a></button>
+				    <div class="dropdown-content">
+					<a href="bob.html">Bob</a>
+					<a href="scoop.html">Scoop</a>
+					<a href="lofty.html">Lofty</a>
+					<a href="muck.html">Muck</a>
+					</div>
+				</div>
+				<a href="chat.html">Bob-chat</a>
+				<a href="nettbutikk.html">Bob-store</a>	
+				<a id="store" href="blogg.html">Bob-bilder</a>
+			</nav>
+			<div>
+					<label id="english">Language</label>
+					<select id="foo" class="custom-select" name="velgSpråk">
+						<option value="#">English</option>
+						<option value="english.html">Norsk</option>
+					</select>
+			</div>
+		</div>
+		<div id="topp">
+			<form id="skjema">
+			<label class="label">1</label>
+			<input type="file" id="inpBilde" required>
+			<label class="label">2</label>
+			<input type="text" id="inpTekst" required placeholder="Beskriv bildet">
+			<label class="label">3</label>
+			<button type="submit">Last opp bilde</button>
+			</form>
+		</div>
+			</header>
+
+	<main>
+	</main>
+	
+	<div id="overlay">
+	<img src="./spinner.gif">
+	</div>
+
+<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCtRs5snve4gVNA29zR8WA9Xqc0v_GNx_8",
+    authDomain: "mediafiler-770f6.firebaseapp.com",
+    databaseURL: "https://mediafiler-770f6.firebaseio.com",
+    projectId: "mediafiler-770f6",
+    storageBucket: "mediafiler-770f6.appspot.com",
+    messagingSenderId: "326541614673"
+  };
+  firebase.initializeApp(config);
+</script>
+	
+	
+<script src="./index.js"></script>
+	</body>
+	</html>
+
+ 
+<script type="text/javascript">
+// HTML-elementer
+	const inpBilde = document.querySelector("#inpBilde");
+	const inpTekst = document.querySelector("#inpTekst");
+	const skjema = document.querySelector("#skjema");
+	const overlay = document.querySelector("#overlay");
+	
+	const main = document.querySelector("main");
+	
+	// Firebase
+	const db = firebase.database();
+	const storage = firebase.storage();
+	
+	const bloggen = db.ref("bloggen");
+	
+	
+	// Funksjon som lagrer bilde i databasen
+	function lagreBilde(evt) {
+	evt.preventDefault();
+	
+	// Viser overlay
+	overlay.style.display = "flex";
+	
+	// Bilde som skal lastes opp
+	const bilde = inpBilde.files[0];
+	
+	// Hvor skal vi lagre bildet
+	const lagringsplass = storage.ref("bloggbilder/" + ( +new Date() ) + bilde.name);
+	
+	// Vi laster opp bildet til storage
+	lagringsplass.put(bilde)
+	.then( bilde => bilde.ref.getDownloadURL() )
+	.then( url => {
+	bloggen.push({
+	url: url,
+	tekst: inpTekst.value
+	});
+	skjema.reset();
+	overlay.style.display = "none";
+	} );
+	
+	}
+	
+	function visBilde(snap) {
+	const key = snap.key;
+	const data = snap.val();
+	
+	main.innerHTML = `
+	<article>
+	<img src="${data.url}">
+	<p>${data.tekst}</p>
+	</article>
+	` + main.innerHTML;
+	}
+	
+	
+	// Event Listeners
+	skjema.addEventListener("submit", lagreBilde);
+	bloggen.on("child_added", visBilde);
+</script>
+
+
+

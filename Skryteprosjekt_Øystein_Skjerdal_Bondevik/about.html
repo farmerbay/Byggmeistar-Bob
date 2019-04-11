@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+	<meta charset="utf-8">
+	<title>Byggmeistar Bob</title>
+	<link rel="stylesheet" type="text/css" href="about.css">
+	<link href='https://fonts.googleapis.com/css?family=Assistant' rel='stylesheet'>	
+</head>
+<body>
+	<header>
+			<nav>
+				<a href="home.html"><img id="logo" src="Media/logo.png"></a>
+				<a id="home" href="home.html">HOME</a>
+				<a id="new" href="#">About</a>
+				<a href="new.html">New Bob</a>
+				<div class="dropdown">
+			    	<button class="dropbtn"><a href="pictures.html">The team &#9662;</a></button>
+				    <div class="dropdown-content">
+					<a href="bob.html">Bob</a>
+					<a href="scoop.html">Scoop</a>
+					<a href="lofty.html">Lofty</a>
+					<a href="muck.html">Muck</a>
+					</div>
+				</div>
+				<a href="chat.html">Bob-chat</a>
+				<a id="store" href="nettbutikk.html">Bob-store</a>	
+			</nav>
+			<div>
+					<label id="english">Language</label>
+					<select id="foo" class="custom-select" name="velgSpråk">
+						<option value="#">English</option>
+						<option value="about_norsk.html">Norsk</option>
+					</select>
+			</div>
+		</div>
+	</header>
+	<hr>
+	<main>
+		<div class="kol-6">
+			<h1 id="hovudoverskrift">Bob the Builder</h1>
+			<p class="tekst">Bob the Builder is an animated TV-show created by Keith Chapman. 
+			The show was produced by Hot-animation until 2012, but today Mattel is in charge of the production.
+			Bob the Builder are well known in many countries, although it was manly produced
+			for the people living on the British Islands. Bob the Builder is a show meaning to teach 
+			children about the importance of helping other with their problems, no matter how big it is,
+			and each episode is about one of Bob’s projects. The show has changed name a number of times over the years.
+			First it was named “Bob the Builder”, but after the producers decided to name the series.
+			“Project: Build It” went on from 2005 to 2009, and “Ready Steady, Build!” was the name until 2012. 
+			Bob the Builder has become very famous for its catchy theme-song; “Can We Fix It?”, a song written by Paul K. Joyce.
+			This song went on to become a million-selling number one hit in the UK. In all the show has a total of 355 episodes 
+			divided into 20 seasons of different series. </p>
+		</div>
+		<div class="kol-6">
+			<img id="aksjon" src="Media/bob_action.jpg">
+		</div>
+		<div class="kol-12">
+			<h1 id="sitat"><i>Can we fix it? Yes we can!</i></h1>
+		</div>
+		<div id="bygging" class="kol-12">
+			<h1>Building the page</h1>
+			<p id="byggtekst" class="tekst">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<div class="kol-4 lite">
+			<img src="Media/bob.jpg">
+		</div>
+		<div class="kol-4 lite">
+			<img src="Media/bob.jpg">
+		</div>
+		<div id="ide" class="kol-4">
+			<h1 id="ideoverskrift">The idea behind</h1>
+			<p class="tekst">The idea behind building this page, was to make a page which both pleases
+			the old fans of Bob the Builder, but also make a place for new Bob the Builders fans,
+			or even the people which are not yet a fan. I searched the internet for information about Bob, 
+			but this was not easy to find, and especially any information in Norwegian. 
+			This I could not be pleased with and decided to build the page. It is also a school-project,
+			which might be the real reason.</p>
+		</div>
+		<div class="kol-12">
+			<form action="#">
+				<input type="text" name="namn" placeholder="Name" required>
+				<input type="number" name="alder" placeholder="Age">
+				<span>Happy</span><input type="radio" value="happy" name="rbFeeling">
+				<span>Sad</span><input type="radio" value="sad" name="rbFeeling">
+				<span>OK</span><input type="radio" value="ok" name="rbFeeling">
+				<button type="submit">Submit</button>
+			</form>			
+		</div>
+	</main>
+	<footer>
+		<div id="footer">
+			<div id="copyright">
+				<ul>
+					<li><i>Copyright:</i> Øystein Skjerdal Bondevik 2018</li>
+					<li><i>Last updated</i> 15.12.2018</li>
+				</ul>
+			</div>	
+			<div>
+				<ul>
+					<li>About the <a target="_blank" href="https://no.wikipedia.org/wiki/Kjell_Magne_Bondevik">Bondevik-corporation</a></li>
+				</ul>
+			</div>
+		</div>	
+	</footer>
+</body>
+<script>
+    document.getElementById("foo").onchange = function() {
+        if (this.selectedIndex!==0) {
+            window.location.href = this.value;
+        }        
+    };
+</script>
+</html>

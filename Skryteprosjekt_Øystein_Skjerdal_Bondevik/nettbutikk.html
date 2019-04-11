@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+	<meta charset="utf-8">
+	<title>Byggmeistar Bob</title>
+	<link rel="stylesheet" type="text/css" href="nettbutikk.css">
+	<link href='https://fonts.googleapis.com/css?family=Assistant' rel='stylesheet'>	
+</head>
+<body>
+	<header>
+			<nav>
+				<a href="home.html"><img id="logo" src="Media/logo.png"></a>
+				<a id="home" href="home.html">HOME</a>
+				<a href="about.html">About</a>
+				<a href="new.html">New Bob</a>
+				<div class="dropdown">
+			    	<button class="dropbtn"><a href="pictures.html">The team &#9662;</a></button>
+				    <div class="dropdown-content">
+					<a href="bob.html">Bob</a>
+					<a href="scoop.html">Scoop</a>
+					<a href="lofty.html">Lofty</a>
+					<a href="muck.html">Muck</a>
+					</div>
+				</div>
+				<a href="chat.html">Bob-chat</a>
+				<a id="store" href="nettbutikk.html">Bob-store</a>	
+				<a href="blogg.html">Bob-bilder</a>
+			</nav>
+			<div>
+					<label id="english">Language</label>
+					<select id="foo" class="custom-select" name="velgSpråk">
+						<option value="#">English</option>
+						<option value="english.html">Norsk</option>
+					</select>
+			</div>
+		</div>
+		<hr>
+		<nav id="nav">			
+			<button onclick="visAlleVarer()">All products</button>
+			<button onclick="visBukser()">Toys</button>
+			<button onclick="visSkjorter()">Other products</button>
+			<button onclick="visBilligaste()">Five cheapest</button>
+			<button onclick="visIntervall()">Between 200 and 500</button>
+			<button>Shoping cart</button>
+			<button>Empty shoping cart</button>    
+			<input id="sokefelt" type="text" placeholder="Søk her">
+        </nav>
+	</header>
+<main>
+
+	
+		<script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyA3ALKLEmcbBNbxXcz-wH1RdmPhWd4lExs",
+		    authDomain: "bob-butikk.firebaseapp.com",
+		    databaseURL: "https://bob-butikk.firebaseio.com",
+		    projectId: "bob-butikk",
+		    storageBucket: "",
+		    messagingSenderId: "579022317412"
+		  };
+		  firebase.initializeApp(config);
+		</script>
+
+        <script>
+            let database = firebase.database();
+            let bukser = database.ref("varer/leiker");
+            let skjorter = database.ref("varer/skjorter");
+            var sokefelt = document.getElementById("sokefelt");
+            var søketekst ="";
+            let main = document.querySelector("main");
+            function visVare(snapshot) {
+                let vare = snapshot.val();
+                main.innerHTML += 
+                `<article>
+                        <img src="bilder/${vare.bilde}">
+                        <h1>${vare.merke} ${vare.modell}</h1>
+                        <p>${vare.pris}</p>
+                    </article>`;
+            }
+            sokefelt.oninput = sok;
+            function sok () {
+                soeketekst=sokefelt.value;
+                visBukser();
+
+            }
+            function visAlleVarer() {
+                bukser.on("child_added", visVare);
+                skjorter.on("child_added", visVare);
+            }
+            visAlleVarer();
+            function visAlleVarer() {
+                main.innerHTML = ""; 
+                bukser
+                .orderByChild("pris")
+                .on("child_added", visVare);
+                skjorter
+                .orderByChild("pris")
+                .on("child_added", visVare);
+
+            }
+            function visBukser() {
+                main.innerHTML = " ";
+                bukser
+                .orderByChild("merke")
+                .startAt(soeketekst)
+                .endAt(soeketekst+ '\uf8ff')
+                .on("child_added", visVare);
+
+            }
+            function visSkjorter() {
+                main.innerHTML = " ";
+                skjorter
+                .orderByChild("merke")
+                .on("child_added", visVare);
+            }
+          	function visBilligaste() {
+          		main.innerHTML = " ";
+          		bukser
+          		.orderByChild("pris")
+          		.limitToFirst(5)
+          		.on("child_added", visVare);
+          	}
+          	function visIntervall() {
+          		main.innerHTML = " ";
+          		bukser
+          		.orderByChild("pris")
+          		.startAt(200)
+          		.endAt(500)
+          		.on("child_added", visVare);
+          	}
+        </script>
+</main>
+	
+	<footer>
+		<div id="footer">
+			<div id="copyright">
+				<ul>
+					<li><i>Copyright:</i> Øystein Skjerdal Bondevik 2018</li>
+					<li><i>Last updated</i> 17.12.2018</li>
+				</ul>
+			</div>	
+			<div>
+				<ul>
+					<li>About the <a target="_blank" href="https://no.wikipedia.org/wiki/Kjell_Magne_Bondevik">Bondevik-corporation</a></li>
+				</ul>
+			</div>
+		</div>	
+	</footer>
+</body>
+<script>
+    document.getElementById("foo").onchange = function() {
+        if (this.selectedIndex!==0) {
+            window.location.href = this.value;
+        }        
+    };
+</script>
+
+</html>
+
+

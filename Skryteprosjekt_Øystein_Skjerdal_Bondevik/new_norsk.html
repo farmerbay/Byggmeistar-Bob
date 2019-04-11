@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+	<meta charset="utf-8">
+	<title>Byggmeistar Bob</title>
+	<link rel="stylesheet" type="text/css" href="new.css">
+	<link href='https://fonts.googleapis.com/css?family=Assistant' rel='stylesheet'>	
+</head>
+<body>
+	<header>
+			<nav>
+				<a href="english.html"><img id="logo" src="Media/logo.png"></a>
+				<a href="english.html">HEIM</a>
+				<a href="about_norsk.html">Om</a>
+				<a id="new" href="#">Nye Bob</a>
+				<div class="dropdown">
+			    	<button class="dropbtn"><a href="pictures_norsk.html">Laget &#9662;</a></button>
+				    <div class="dropdown-content">
+					<a href="bob_norsk.html">Bob</a>
+					<a href="scoop_norsk.html">Scoop</a>
+					<a href="lofty.html">Lofty</a>
+					<a href="muck_norsk.html">Muck</a>
+					</div>
+				</div>
+				<a href="chat.html">Chat</a>
+				<a href="nettbutikk.html">Nettbutikk</a>
+			</nav>
+			<div>
+					<label>Språk</label>
+					<select id="foo" class="custom-select" name="velgSpråk">
+						<option value="#">Norsk</option>
+						<option value="new.html">English</option>
+					</select>
+			</div>
+		</div>
+	</header>
+	<hr>
+	<main>
+		<div id="new-bob" class="kol-6">
+			<h1 id="overskrift">Nye Bob</h1>
+			<p class="tekst">I oktober 2014 blei serien fornya fordi den skulle på nytt sendast på TV-skjermane for Channel 5. Alle karakterane blei fornya utsjåandemessigt ved at dei blei laga meir moderne og meir passande for den nye sjåargruppa. Dette gjekk ikkje føre seg utan at dei gamle Byggmeister Bob-tilhengjarane fekk det med seg. Mange blei rasande og tenkte at dette var ein forferdeleg ting å gjera. Likevel gjorde produsentane som dei først hadde tenkt og forandra serien. Det var ikkje berre utsjånaden på karakterane som blei forandra. Mattel forandra også stemma til fleire av karakterane. Den største stemme-forandringa var at Lee Ingleby tok over for Neil Morrissey som stemma til Bob. Dette hadde ikkje så mykje å seia for den norske fan-skaren, då dette skjedde i England og USA. Det siste som blei forandra var settinga til historia, der den blei flytta til bykjernen av Spring City.</p>
+		</div>
+		<div class="kol-6">
+			<img id="newbob" src="Media/newbob.jpg">
+		</div>
+		<div id="table" class="kol-6">
+			<table class="tekst"> 
+				<tr>
+					<th>År</th> 
+					<th>Sjåarar</th> 
+				</tr> 
+				<tr>
+					<td>2005</td> 
+					<td>1 675 890</td> 
+				</tr> 
+				<tr>
+					<td>2010</td> 
+					<td>1 592 376</td> 
+				</tr>
+				<tr>
+					<td>2015</td> 
+					<td>1 287 098</td> 
+				</tr> 
+				<tr>
+					<td>2017</td>
+					<td>3 276 890</td>
+				</tr>
+			</table>			
+		</div>
+		<div id="table-tekst" class="kol-6">
+			<h1>Sjåartalet aukar?</h1>
+			<p class="tekst"><b>Tala i denne tabellen har inga samanheng med ekte tal frå serien, og er alle fiktive.</b> Men viss me ser på desse tala, kan me sjå at sjåartalet auka mykje etter at serien blei fornya. Dette har kanskje overraska den gamle fan-skaren til Byggmeister Bob, men uansett så ser det ut som at den nye generasjonen likar fornyinga av serien. </p>
+		</div>
+	</main>
+	<footer>
+		<div id="footer">
+			<div id="copyright">
+				<ul>
+					<li><i>Copyright:</i> Øystein Skjerdal Bondevik 2018</li>
+					<li><i>Førre opptadering:</i>16.12.2018<li>
+				</ul>
+			</div>	
+			<div>
+				<ul>
+					<li>Om <a target="_blank" href="https://no.wikipedia.org/wiki/Kjell_Magne_Bondevik">Bondevik-selskapet</a></li>
+				</ul>
+			</div>
+		</div>	
+	</footer>
+</body>
+<script>
+    document.getElementById("foo").onchange = function() {
+        if (this.selectedIndex!==0) {
+            window.location.href = this.value;
+        }        
+    }
+</script>
+</html>

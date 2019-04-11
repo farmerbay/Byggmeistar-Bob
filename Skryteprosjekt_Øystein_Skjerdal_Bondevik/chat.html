@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+	<meta charset="utf-8">
+	<title>Byggmeistar Bob</title>
+	<link rel="stylesheet" type="text/css" href="chat.css">
+	<link href='https://fonts.googleapis.com/css?family=Assistant' rel='stylesheet'>	
+</head>
+<body>
+	<header>
+			<nav>
+				<a href="home.html"><img id="logo" src="Media/logo.png"></a>
+				<a id="home" href="home.html">HOME</a>
+				<a href="about.html">About</a>
+				<a href="new.html">New Bob</a>
+				<div class="dropdown">
+			    	<button class="dropbtn"><a href="pictures.html">The team &#9662;</a></button>
+				    <div class="dropdown-content">
+					<a href="bob.html">Bob</a>
+					<a href="scoop.html">Scoop</a>
+					<a href="lofty.html">Lofty</a>
+					<a href="muck.html">Muck</a>
+					</div>
+				</div>
+				<a id="chat" href="chat.html">Bob-chat</a>
+				<a href="nettbutikk.html">Bob-store</a>	
+				<a href="blogg.html">Bob-bilder</a>
+			</nav>
+			<div>
+					<label id="english">Language</label>
+					<select id="foo" class="custom-select" name="velgSpråk">
+						<option value="#">English</option>
+						<option value="english.html">Norsk</option>
+					</select>
+			</div>
+		</div>
+	</header>
+	<hr>
+<main>
+		<h1  class="kol-12">Chat</h1>
+		<form id="skjema" class="kol-12">
+			<input type="text" style="font-size: 0.6em;" id="inpAvsendar" required placeholder="Kven er du?">
+			<input type="text" style="font-size: 0.6em;" id="inpMelding" required placeholder="Kva har du på hjarte?">
+			<button id="knapp" type="submit" class="button">OK</button>
+		</form>
+		<article id="txtMeldinger" class="kol-12"></article>
+	<div id="fyll">
+	</div>
+	<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyAl6rNSxqMsVbVULsOuABb_5wL7qQmssa8",
+	    authDomain: "startprosjekt.firebaseapp.com",
+	    databaseURL: "https://startprosjekt.firebaseio.com",
+	    projectId: "startprosjekt",
+	    storageBucket: "startprosjekt.appspot.com",
+	    messagingSenderId: "1073398949362"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+	<script>
+		let database = firebase.database();
+		let meldinger = database.ref("meldinger");
+		let skjema = document.
+		getElementById("skjema");
+		let inpAvsendar = document.
+		getElementById("inpAvsendar");
+		let inpMelding = document.
+		getElementById("inpMelding");
+		let txtMeldinger = document.
+		getElementById("txtMeldinger");
+		function visMelding(snapshot){
+			let melding = snapshot.val();
+			let meldingTekst = `<p><i>Byggmeistar</i>
+				<b>${melding.avsendar}</b> seier: 
+				<i>${melding.tekst}</i>
+			</p>`;
+			txtMeldinger.innerHTML = meldingTekst + txtMeldinger.
+			innerHTML;
+		}
+		function regNyMelding(evt){
+			evt.preventDefault();
+			var nyMelding = {
+				avsendar: inpAvsendar.value,
+				tekst: inpMelding.value
+			};
+		meldinger.push(nyMelding);
+		inpMelding.value = "";
+		}{
+		meldinger.on("child_added", visMelding);
+		skjema.onsubmit = regNyMelding;
+	}
+		function editItem() {
+	  this.className = "edit";
+	  var input = this.querySelector("input");
+	  input.focus();
+	  input.setSelectionRange(0, input.value.length);
+	}
+		function updateItem() {
+	  this.previousElementSibling.innerHTML = this.value;
+	  this.parentNode.className = "";
+	}
+		function itemKeypress(event) {
+	  if (event.which === 13) {
+	    updateItem.call(this);
+	  }
+	}
+	</script>
+</main>
+	
+	<footer>
+		<div id="footer">
+			<div id="copyright">
+				<ul>
+					<li><i>Copyright:</i> Øystein Skjerdal Bondevik 2018</li>
+					<li><i>Last updated</i> 17.12.2018</li>
+				</ul>
+			</div>	
+			<div>
+				<ul>
+					<li>About the <a target="_blank" href="https://no.wikipedia.org/wiki/Kjell_Magne_Bondevik">Bondevik-corporation</a></li>
+				</ul>
+			</div>
+		</div>	
+	</footer>
+</body>
+<script>
+    document.getElementById("foo").onchange = function() {
+        if (this.selectedIndex!==0) {
+            window.location.href = this.value;
+        }        
+    };
+</script>
+
+</html>
+
+

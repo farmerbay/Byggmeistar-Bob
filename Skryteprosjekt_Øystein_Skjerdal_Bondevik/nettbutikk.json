@@ -1,0 +1,117 @@
+{ 
+ "varer" : {
+    "leiker" : {
+      "leike001" : {
+        "merke" : "Leike",
+        "modell" : "Bob",
+        "pris" : 490,
+        "bilde" : "leike001.jpg"
+      },
+      "leike002" : {
+        "merke" : "Leike",
+        "modell" : "Bil",
+        "pris" : 580,
+        "bilde" : "leike002.jpg"
+      },
+      "leike003" : {
+        "merke" : "Leike",
+        "modell" : "Muck",
+        "pris" : 180,
+        "bilde" : "leike003.jpg"
+      },
+      "leike004" : {
+        "merke" : "Leike",
+        "modell" : "Scoop",
+        "pris" : 280,
+        "bilde" : "leike004.jpg"
+      },
+  "leike005" : {
+        "merke" : "Leike",
+        "modell" : "Lofty",
+        "pris" : 90,
+        "bilde" : "leike005.jpg"
+      },
+      "leike006" : {
+        "merke" : "Leike",
+        "modell" : "Muck",
+        "pris" : 380,
+        "bilde" : "leike006.jpg"
+      },
+      "leike007" : {
+        "merke" : "Fritidsleike",
+        "modell" : "Kamuflasje",
+        "pris" : 180,
+        "bilde" : "leike007.jpg"
+      },
+      "leike008" : {
+        "merke" : "Kortleike",
+        "modell" : "Lommer",
+        "pris" : 580,
+        "bilde" : "leike008.jpg"
+      },
+      "leike009" : {
+        "merke" : "Olaleike",
+        "modell" : "Steinvasket",
+        "pris" : 490,
+        "bilde" : "leike009.jpg"
+      },
+      "leike010" : {
+        "merke" : "Fritidsleike",
+        "modell" : "Rutete",
+        "pris" : 580,
+        "bilde" : "leike010.jpg"
+      }
+    },
+
+  "skjorter" : {
+      "anna001" : {
+        "merke" : "Plakat",
+        "modell" : "Obama",
+        "pris" : 1000,
+        "bilde" : "anna001.jpg"
+      },
+      "anna002" : {
+        "merke" : "Spel",
+        "modell" : "Playstation",
+        "pris" : 380,
+        "bilde" : "anna002.jpg"
+      },
+    "anna003" : {
+    "merke" : "Spel",
+          "modell" : "Gameboy",
+          "pris" : 280,
+          "bilde" : "anna003.jpg"
+        },
+    "anna004" : {
+    "merke" : "Spel",
+          "modell" : "Wii",
+          "pris" : 400,
+          "bilde" : "anna004.jpg"
+        },
+    "anna005" : {
+    "merke" : "Film",
+          "modell" : "DVD",
+          "pris" : 380,
+          "bilde" : "anna005.jpg"
+        },
+    "anna006" : {
+    "merke" : "Pusslespel",
+          "modell" : "Stort",
+          "pris" : 589,
+          "bilde" : "anna006.jpg"
+        },
+    "anna007" : {
+    "merke" : "Pusslespel",
+          "modell" : "Lite",
+          "pris" : 380,
+          "bilde" : "anna007.jpg"
+        },
+    "anna008" : {
+    "merke" : "Dyne",
+          "modell" : "Seng",
+          "pris" : 1200,
+          "bilde" : "anna008.jpg"
+        }
+      }
+    }
+  }

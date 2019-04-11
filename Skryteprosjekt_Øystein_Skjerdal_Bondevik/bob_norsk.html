@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+	<meta charset="utf-8">
+	<title>Byggmeistar Bob</title>
+	<link rel="stylesheet" type="text/css" href="team.css">
+	<link href='https://fonts.googleapis.com/css?family=Assistant' rel='stylesheet'>	
+</head>
+<body>
+	<header>
+			<nav>
+				<a href="english.html"><img id="logo" src="Media/logo.png"></a>
+				<a href="english.html">HEIM</a>
+				<a href="about_norsk.html">Om</a>
+				<a href="new_norsk.html">Nye Bob</a>
+				<div class="dropdown">
+			    	<button class="dropbtn"><a href="pictures_norsk.html">Laget &#9662;</a></button>
+				    <div class="dropdown-content">
+					<a id="new" href="#">Bob</a>
+					<a href="scoop_norsk.html">Scoop</a>
+					<a href="lofty.html">Lofty</a>
+					<a href="muck_norsk.html">Muck</a>
+					</div>
+				</div>
+				<a href="chat.html">Chat</a>
+				<a href="nettbutikk.html">Nettbutikk</a>
+			</nav>
+			<div>
+					<label>Språk</label>
+					<select id="foo" class="custom-select" name="velgSpråk">
+						<option value="#">Norsk</option>
+						<option value="bob.html">English</option>
+					</select>
+			</div>
+		</div>
+	</header>
+	<hr>
+	<main>
+		<div id="bilde" class="kol-4">
+			<img src="Media/bob-ingenbakgrunn.png" id="bob">
+		</div>
+		<div class="kol-8">
+			<h1>Bob</h1>
+			<p class="tekst">
+				Ei typisk setning som Bob seier er: «Kan det fiksast? Klart den kan!» dette fortel mykje om Bob. Han er ein byggjar i Spring City, der han tenkjer at ingen jobb er for liten eller for stor for han. Han er veldig dedikert og leiaren for laget sitt. Eit karakteristisk personlegdomstrekk som blir brukt for å skildra Bob er optimistisk. Han trur alltid han kan finna ei løysning, noko som han også gjere. Ofte med fantastisk hjelp frå hjelparane sine. 		
+			</p>
+		</div>
+	</main>
+	<footer>
+		<div id="footer">
+			<div id="copyright">
+				<ul>
+					<li><i>Copyright:</i> Øystein Skjerdal Bondevik 2018</li>
+					<li><i>Last updated</i> 14.12.2018</li>
+				</ul>
+			</div>	
+			<div>
+				<ul>
+					<li>About the <a target="_blank" href="https://no.wikipedia.org/wiki/Kjell_Magne_Bondevik">Bondevik-corporation</a></li>
+				</ul>
+			</div>
+		</div>	
+	</footer>
+</body>
+<script>
+    document.getElementById("foo").onchange = function() {
+        if (this.selectedIndex!==0) {
+            window.location.href = this.value;
+        }        
+    };
+</script>
+</html>

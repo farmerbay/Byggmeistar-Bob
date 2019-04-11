@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+	<meta charset="utf-8">
+	<title>Byggmeistar Bob</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link href='https://fonts.googleapis.com/css?family=Assistant' rel='stylesheet'>	
+</head>
+<body>
+	<header>
+			<nav>
+				<a href="#"><img id="logo" src="Media/logo.png"></a>
+				<a id="home" href="#">HEIM</a>
+				<a href="about_norsk.html">Om</a>
+				<a href="new_norsk.html">Nye Bob</a>
+				<div class="dropdown">
+			    	<button class="dropbtn"><a href="pictures_norsk.html">Laget &#9662;</a></button>
+				    <div class="dropdown-content">
+					<a href="bob_norsk.html">Bob</a>
+					<a href="scoop_norsk.html">Scoop</a>
+					<a href="lofty.html">Lofty</a>
+					<a href="muck_norsk.html">Muck</a>
+					</div>
+				</div>
+				<a href="chat.html">Chat</a>
+				<a href="nettbutikk.html">Nettbutikk</a>
+			</nav>
+			<div>
+					<label>Språk</label>
+					<select id="foo" class="custom-select" name="velgSpråk">
+						<option value="#">Norsk</option>
+						<option value="index.html">English</option>
+					</select>
+			</div>
+		</div>
+	</header>
+	<hr>
+	<main>
+		<div class="kol-12">
+			<img id="bob_the_builder" src="Media/bob_the_builder_norsk1.jpg">
+			<h1>Byggmeistar Bob</h1>
+		</div>
+		<div id="under" class="kol-5">
+			<h2 class="underoverskrift">Det beste fjernsynsprogrammet nokon gong?</h2>
+			<p class="tekst">Fyrste gong Byggmeister Bob blei sendt på fjernsynet, var ein sein haustkveld i 1998, og det endra historia. På grunn av sine fengjande songar og sine eigenarta figurar, fann denne serien ein plass i kvar unge sitt hjarte. Serien var nominert til BAFTA-prisen i kategorien «Førskule animasjon» ti år på rad, frå 1999 til 2009, og vann prisen for beste animasjon for ungar i 2003. I over 20 år har Byggmeister Bob og gjengen ikkje berre lært oss om bygging og graving, men også om det å vera godhjarta og positiv.</p>
+		</div>
+		<div class="kol-7">
+			<img id="stilaset" src="Media/bob_building.jpg">
+		</div>
+	</main>
+	<footer>
+		<div id="footer">
+			<div id="copyright">
+				<ul>
+					<li><i>Copyright:</i> Øystein Skjerdal Bondevik 2018</li>
+					<li><i>Førre oppdatering</i> 17.12.2018</li>
+				</ul>
+			</div>	
+			<div>
+				<ul>
+					<li>Om<a target="_blank" href="https://no.wikipedia.org/wiki/Kjell_Magne_Bondevik">Bondevik-sleskapet</a></li>
+				</ul>
+			</div>
+		</div>	
+	</footer>
+</body>
+<script>
+    document.getElementById("foo").onchange = function() {
+        if (this.selectedIndex!==0) {
+            window.location.href = this.value;
+        }        
+    };
+</script>
+
+</html>

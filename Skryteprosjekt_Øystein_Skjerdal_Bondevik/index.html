@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+	<meta charset="utf-8">
+	<title>Logg inn</title>
+</head>
+<body>
+	<form name="myForm">
+		<p>Logg inn for å sjå Bygggmeistar Bob</p>
+		<input type="password" name="pwd" maxlength="10">
+		<input type="button" onclick="sjekkPassord()" value="Logg inn">
+	</form>
+<script type="text/javascript">
+	function  sjekkPassord() {
+		var x = document.forms["myForm"]["pwd"].value;
+		if (x == "1701") {
+			window.location.assign("home.html");
+		}
+		else if (x==""){
+			alert("Please type your password");
+		}
+		else{
+			alert("Incorrect password, try again");
+		}
+	}	
+</script>
+</body>
+
+
+</html>

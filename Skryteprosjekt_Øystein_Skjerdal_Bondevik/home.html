@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+	<meta charset="utf-8">
+	<title>Byggmeistar Bob</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link href='https://fonts.googleapis.com/css?family=Assistant' rel='stylesheet'>	
+</head>
+<body>
+	<header>
+			<nav>
+				<a href="#"><img id="logo" src="Media/logo.png"></a>
+				<a id="home" href="#">HOME</a>
+				<a href="about.html">About</a>
+				<a href="new.html">New Bob</a>
+				<div class="dropdown">
+			    	<button class="dropbtn"><a href="pictures.html">The team &#9662;</a></button>
+				    <div class="dropdown-content">
+					<a href="bob.html">Bob</a>
+					<a href="scoop.html">Scoop</a>
+					<a href="lofty.html">Lofty</a>
+					<a href="muck.html">Muck</a>
+					</div>
+				</div>
+				<a href="chat.html">Bob-chat</a>
+				<a id="store" href="nettbutikk.html">Bob-store</a>	
+			</nav>
+			<div>
+					<label id="english">Language</label>
+					<select id="foo" class="custom-select" name="velgSpråk">
+						<option value="#">English</option>
+						<option value="english.html">Norsk</option>
+					</select>
+			</div>
+		</div>
+	</header>
+	<hr>
+	<main>
+		<div class="kol-12">
+			<img id="bob_the_builder" src="Media/bob_the_builder_kopi.jpg">
+			<h1>Bob the builder</h1>
+		</div>
+		<div id="under" class="kol-5">
+			<h2 class="underoverskrift">The greatest show ever?</h2>
+			<p class="tekst">Bob the Builder aired first on television on a late fall-night in 1998, and after that, history was changed. With its catchy songs and remarkable figures this series went straight in to every child’s heart. It was nominated in the BAFTA “Pre-school animation” category in a whole decade, from 1999 to 2009, and won the “Children’s Animation” category in 2003. For over 20 years, Bob the Builder has taught us about not only digging and building, but also kindness and positivity. </p>
+		</div>
+		<div class="kol-7">
+			<img id="stilaset" src="Media/bob_building.jpg">
+		</div>
+	</main>
+	<footer>
+		<div id="footer">
+			<div id="copyright">
+				<ul>
+					<li><i>Copyright:</i> Øystein Skjerdal Bondevik 2018</li>
+					<li><i>Last updated</i> 17.12.2018</li>
+				</ul>
+			</div>	
+			<div>
+				<ul>
+					<li>About the <a target="_blank" href="https://no.wikipedia.org/wiki/Kjell_Magne_Bondevik">Bondevik-corporation</a></li>
+				</ul>
+			</div>
+		</div>	
+	</footer>
+</body>
+<script>
+    document.getElementById("foo").onchange = function() {
+        if (this.selectedIndex!==0) {
+            window.location.href = this.value;
+        }        
+    };
+</script>
+
+</html>
+
+

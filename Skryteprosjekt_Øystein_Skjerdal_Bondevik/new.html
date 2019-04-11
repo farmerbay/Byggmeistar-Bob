@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+	<meta charset="utf-8">
+	<title>Byggmeistar Bob</title>
+	<link rel="stylesheet" type="text/css" href="new.css">
+	<link href='https://fonts.googleapis.com/css?family=Assistant' rel='stylesheet'>	
+</head>
+<body>
+	<header>
+			<nav>
+				<a href="home.html"><img id="logo" src="Media/logo.png"></a>
+				<a id="home" href="home.html">HOME</a>
+				<a href="about.html">About</a>
+				<a id="new" href="#">New Bob</a>
+				<div class="dropdown">
+			    	<button class="dropbtn"><a href="pictures.html">The team &#9662;</a></button>
+				    <div class="dropdown-content">
+					<a href="bob.html">Bob</a>
+					<a href="scoop.html">Scoop</a>
+					<a href="lofty.html">Lofty</a>
+					<a href="muck.html">Muck</a>
+					</div>
+				</div>
+				<a href="chat.html">Bob-chat</a>
+				<a id="store" href="nettbutikk.html">Bob-store</a>	
+			</nav>			<div>
+					<label id="english">Language</label>
+					<select id="foo" class="custom-select" name="velgSpråk">
+						<option value="#">English</option>
+						<option value="new_norsk.html">Norsk</option>
+					</select>
+			</div>
+		</div>
+	</header>
+	<hr>
+	<main>
+		<div id="new-bob" class="kol-6">
+			<h1 id="overskrift">New Bob</h1>
+			<p class="tekst">In October 2014 Bob the Builder was revamped because the series was going on air again in 2015 for Channel 5. All of the characters were renewed and made more modern and more appropriate for a new viewing group. This didn’t under the radar by the old Bob the Builder-fans. Many were furious after the change and thought that it was a horrible thing to do. The producers went through with the transformation anyhow despite the disconvenience from the older audience. It was not only the looks of the characters that were changed. Mattel also changed the voicing of some of the characters. The biggest change was that Lee Ingleby replaced Neil Morrissey as the voice of Bob. The last thing that was changed was the setting of the story, with the move to the metropolis of Spring City.</p>
+		</div>
+		<div class="kol-6">
+			<img id="newbob" src="Media/newbob.jpg">
+		</div>
+		<div id="table" class="kol-6">
+			<table class="tekst"> 
+				<tr>
+					<th>Year</th> 
+					<th>Viewers</th> 
+				</tr> 
+				<tr>
+					<td>2005</td> 
+					<td>1 675 890</td> 
+				</tr> 
+				<tr>
+					<td>2010</td> 
+					<td>1 592 376</td> 
+				</tr>
+				<tr>
+					<td>2015</td> 
+					<td>1 287 098</td> 
+				</tr> 
+				<tr>
+					<td>2017</td>
+					<td>3 276 890</td>
+				</tr>
+			</table>			
+		</div>
+		<div id="table-tekst" class="kol-6">
+			<h1>Viewers increasing?</h1>
+			<p class="tekst"><b>The numbers in the table has no real correspondence with
+			the numbers of the viewers for the show, and are all made up.</b><br> But if we take a look at these numbers, 
+			we can see that the number of viewers increased after the show was revamped. 
+			This may have surprised the old Bob the Builder fans, but anyhow it seems that
+			the new generation like the renovation of the characters. </p>
+		</div>
+	</main>
+	<footer>
+		<div id="footer">
+			<div id="copyright">
+				<ul>
+					<li><i>Copyright:</i> Øystein Skjerdal Bondevik 2018</li>
+					<li><i>Last updated</i> 15.12.2018</li>
+				</ul>
+			</div>	
+			<div>
+				<ul>
+					<li>About the <a target="_blank" href="https://no.wikipedia.org/wiki/Kjell_Magne_Bondevik">Bondevik-corporation</a></li>
+				</ul>
+			</div>
+		</div>	
+	</footer>
+</body>
+<script>
+    document.getElementById("foo").onchange = function() {
+        if (this.selectedIndex!==0) {
+            window.location.href = this.value;
+        }        
+    };
+</script>
+</html>
