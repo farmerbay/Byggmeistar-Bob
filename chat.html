@@ -72,8 +72,8 @@
 		getElementById("txtMeldinger");
 		function visMelding(snapshot){
 			let melding = snapshot.val();
-			let meldingTekst = `<p><i>Byggmeistar</i>
-				<b>${melding.avsendar}</b> seier: 
+			let meldingTekst = `<p><i>Byggmeistar   -</i>
+				<b>${melding.avsendar}</b>: 
 				<i>${melding.tekst}</i>
 			</p>`;
 			txtMeldinger.innerHTML = meldingTekst + txtMeldinger.
